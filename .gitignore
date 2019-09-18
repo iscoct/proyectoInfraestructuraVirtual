@@ -1,0 +1,5 @@
+# Paquetes instalados de NodeJS
+node_modules/
+
+# Reportes de los tests
+spec/Reports
