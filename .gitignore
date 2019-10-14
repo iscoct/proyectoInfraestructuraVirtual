@@ -1,5 +1,9 @@
 # Paquetes instalados de NodeJS
 node_modules/
 
+# Código transpilado por typescript
+
+dist/
+
 # Reportes de los tests
 spec/Reports
