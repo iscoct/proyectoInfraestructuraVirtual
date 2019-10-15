@@ -18,5 +18,6 @@ Este microservicio pretende paliar este proceso repetitivo utilizando los compon
 
 ## Enlaces
 
-- Herramientas que se utilizarán: [Herramientas](https://github.com/iscoct/proyectoInfraestructuraVirtual/docs/herramientas.md)
-- Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://github.com/iscoct/proyectoInfraestructuraVirtual/docs/lanzamiento.md)
+- Para ver este mismo README desde gh-pages: [GitHub Pages](https://iscoct.github.io/proyectoInfraestructuraVirtual/)
+- Herramientas que se utilizarán: [Herramientas](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/herramientas)
+- Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)

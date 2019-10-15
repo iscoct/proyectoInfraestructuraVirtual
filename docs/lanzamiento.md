@@ -1,7 +1,7 @@
 # Requisitos para instalar, realizar el build y el lanzamiento de la aplicación
 
 - Tener instalado [NodeJS](https://nodejs.org/es/download/)
-- Tener instalado [Npm](https://www.npmjs.com/get-npm) o alguno similar.
+- Tener instalado [Npm](https://www.npmjs.com/get-npm) o [Npx](https://www.npmjs.com/package/npx).
 
 # Instalación
 
