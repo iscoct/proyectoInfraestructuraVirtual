@@ -10,3 +10,5 @@
 - Herramienta de construcción: **tsc** ([Typescript](https://www.typescriptlang.org/docs/handbook/compiler-options.html))
 - Documentación de la API: [Swagger](https://swagger.io/tools/swagger-ui/)
 - Metodología de desarrollo: [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
+- Para hacer integración continua: [Travis CI](https://travis-ci.com/)
+- Para hacer el despliegue en la nube: [Heroku](https://www.heroku.com/)
