@@ -17,7 +17,7 @@ describe('Server', () => {
     const server = express();
 
     it('must listen at 8080 port', () => {
-        expect(server.listen).toBeCalledWith(8080);
+        expect(server.listen).toBeCalledWith(8080, expect.any(Function));
     });
 
     it('must server at / and /health to check that the server is running', () => {
