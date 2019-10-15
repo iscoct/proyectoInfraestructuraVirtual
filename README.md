@@ -19,5 +19,6 @@ Este microservicio pretende paliar este proceso repetitivo utilizando los compon
 ## Enlaces
 
 - Para ver este mismo README desde gh-pages: [GitHub Pages](https://iscoct.github.io/proyectoInfraestructuraVirtual/)
+- Primer ejemplo sobre la entrada y la salida que hará este microservicio: [Ejemplo](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ejemplo)
 - Herramientas que se utilizarán: [Herramientas](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/herramientas)
 - Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
