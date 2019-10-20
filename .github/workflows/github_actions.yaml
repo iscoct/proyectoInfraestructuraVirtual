@@ -26,9 +26,10 @@ jobs:
         uses: actions/setup-node@v1
         with: 
           node-version: '10.x'
+      - name: 'Going to the correct directory'
+        run: 'cd ..'
       - name: 'Install project'
         run: 'npm install'
-        working-directory: './'
       - name: 'Build'
         run: 'npm run build'
       - name: 'Test'
