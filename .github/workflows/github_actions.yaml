@@ -19,7 +19,7 @@ on:
       - '.gitignore'
   
 jobs:
-  build:
+  run:
     runs-on: 'ubuntu-18.04'
     steps:
       - name: 'Install NodeJS'
@@ -28,9 +28,6 @@ jobs:
           node-version: '10.x'
       - name: 'Install, build and test'
         run: |
-          cd ..
-          ls ./
-          ls ./proyectoInfraestructuraVirtual
           npm install
           npm run build
           npm run test
