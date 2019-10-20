@@ -22,6 +22,7 @@ jobs:
   run:
     runs-on: 'ubuntu-18.04'
     steps:
+      - uses: actions/checkout@v1
       - name: 'Install NodeJS'
         uses: actions/setup-node@v1
         with: 
