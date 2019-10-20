@@ -29,6 +29,8 @@ jobs:
       - name: 'Install, build and test'
         run: |
           cd ..
+          ls ./
+          ls ./proyectoInfraestructuraVirtual
           npm install
           npm run build
           npm run test
