@@ -1,0 +1,30 @@
+name: ReactParser
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - 'docs/**'
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+  
+jobs:
+  name: 'Build to pass the tests'
+  runs-on: 'ubuntu-18.04'
+  steps:
+    - name: 'Install'
+      run: 'npm install'
+    - name: 'Build'
+      run: 'npm run build'
+    - name: 'Test'
+      run: 'npm run test'
