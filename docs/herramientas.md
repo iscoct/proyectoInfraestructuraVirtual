@@ -32,5 +32,5 @@
 - Metodología de desarrollo: [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
     La principal ventaja de esta técnica de desarrollo es que al indicar lo que ha de hacer el software se evita la posibilidad de escribir código que no se va a utilizar.
     La otra principal ventaja es que si no garantizamos que pasa un test tampoco podemos garantizar que el código funciona tal y como se quiere.
-- Para hacer integración continua: [Travis CI](https://travis-ci.com/)
-- Para hacer el despliegue en la nube: [Heroku](https://www.heroku.com/)
+- Para hacer integración continua: [Travis CI](https://travis-ci.com/).
+- Para hacer el despliegue en la nube: [Heroku](https://www.heroku.com/).
