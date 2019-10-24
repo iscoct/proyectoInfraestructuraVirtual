@@ -1,28 +1,25 @@
-import {
-    ButtonProps
-} from 'react-bootstrap/Button';
 import { Field } from '../types';
 
-function parser(fieldObject: ButtonProps & Field): string {
-    let parsedField = `<Button`;
-    let prop: keyof (ButtonProps & Field);
+function parser<T extends Record<string, any> & Field>(fieldObject: T): string {
+    let parsedField = `<${fieldObject.element}`;
+    let prop: keyof T;
 
     for (prop in fieldObject) {
-        if (fieldObject.hasOwnProperty(prop) && prop !== 'element') {
+        if (fieldObject.hasOwnProperty(prop) && prop !== 'element'
+                && prop !== 'value') {
             parsedField += `
                 ${prop}=`;
 
-            if (typeof fieldObject[prop] === 'string') {
-                parsedField += `"${fieldObject[prop]}"`;
-            } else {
-                parsedField += `{${fieldObject[prop]}}`;
-            }
+            parsedField += typeof fieldObject[prop] === 'string' ?
+                `"${fieldObject[prop]}"` : `{${fieldObject[prop]}}`;
         }
     }
 
-    parsedField += `
-        />
-    `;
+    parsedField += fieldObject.value ? `
+        >
+            ${fieldObject.value}
+        </${fieldObject.element}>
+    ` : `/>`;
 
     return parsedField;
 }

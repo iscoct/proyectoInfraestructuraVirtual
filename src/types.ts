@@ -1,5 +1,6 @@
 interface Field {
-    element: 'button';
+    element: 'Button' | 'Dropdown.Item' | 'Dropdown.Divider' | 'Dropdown.Header' | 'Dropdown.Toggle';
+    value?: string;
 }
 
 export {
