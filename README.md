@@ -15,7 +15,7 @@ Ejemplo de elementos son botones, checkboxes, select entre otros. Mientras que e
 
 ## Descripción general del proyecto.
 
-Este microservicio pretende paliar este proceso repetitivo utilizando los componentes de [React Bootstrap](https://react-bootstrap.github.io/components/alerts) exportando un esquema en formato JSON (metadata) para que nos devuelva un esqueleto de una aplicación de React.
+Este microservicio pretende paliar este proceso repetitivo exportando un esquema en formato JSON (metadata) para que nos devuelva un esqueleto de una aplicación de React.
 
 ## Enlaces
 
@@ -23,3 +23,4 @@ Este microservicio pretende paliar este proceso repetitivo utilizando los compon
 - Primer ejemplo sobre la entrada y la salida que hará este microservicio: [Ejemplo](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ejemplo)
 - Herramientas que se utilizarán: [Herramientas](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/herramientas)
 - Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
+- Para ver el esquema del proyecto: [Esquema](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/esquema)

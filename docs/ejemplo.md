@@ -7,21 +7,30 @@
     "sections": {
         "container": {
             "id": "dummyContainer",
+            "element": "Container",
+            "sections": {
+                "header": {
+                    "id": "dummyModalsHeader",
+                    "element": "Header",
+                    ...
+                },
+                    "body": {
+                    ...
+                },
+                    "footer": {
+                    ...
+                }
+            },
             ...
         },
         "modal": {
-            "header": {
-                "id": "dummyModalsHeader",
-                ...
-            },
-            "body": {
-                ...
-            },
-            "footer": {
-                ...
-            }
+            "id": "dummyModal",
+            "element": "Modal",
+            ...
         },
         "navs": {
+            "id": "dummyId",
+            "element": "Navbar",
             "href": "dummyNavs",
             "disabled": false,
             ...
@@ -46,7 +55,6 @@ En siguientes hitos iremos mostrando la documentación del esquema exportado.
 
 ```
 import React, { PureComponent } from 'react';
-import { Button, Modal, Navbar, ... } from 'react-bootstrap';
 
 export default class App extends PureComponent {
     constructor(props) {

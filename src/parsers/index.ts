@@ -62,7 +62,9 @@ export default function treeParser(tree: any): string {
         export default class View extends PureComponent {
             render() {
                 return (
-                    ${parsedSections}
+                    <React.Fragment>
+                        ${parsedSections}
+                    </React.Fragment>
                 );
             }
         }

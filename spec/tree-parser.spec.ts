@@ -30,19 +30,21 @@ describe('Tree parser', () => {
                 export default class View extends PureComponent {
                     render() {
                         return (
-                            <Dropdown
-                                drop='up'
-                                alignRight={true}
-                                show={true}
-                                flip={true}
-                                id='dummyId'
-                            >
-                                <Dropdown.Toggle
-                                    id='dummyFieldId'
+                            <React.Fragment>
+                                <Dropdown
+                                    drop='up'
+                                    alignRight={true}
+                                    show={true}
+                                    flip={true}
+                                    id='dummyId'
                                 >
-                                    dummyValue
-                                </Dropdown.Toggle>
-                            </Dropdown>
+                                    <Dropdown.Toggle
+                                        id='dummyFieldId'
+                                    >
+                                        dummyValue
+                                    </Dropdown.Toggle>
+                                </Dropdown>
+                            </React.Fragment>
                         );
                     }
                 }
