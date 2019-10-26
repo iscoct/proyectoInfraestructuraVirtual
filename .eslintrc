@@ -49,7 +49,7 @@
       "no-func-assign": "error",
       "no-inner-declarations": "error",
       "no-invalid-regexp": "error",
-      "complexity": ["error", 7],
+      "complexity": ["error", 8],
       "consistent-return": "error",
       "curly": "error",
       "eqeqeq": "error",
@@ -91,7 +91,7 @@
           "skipComments": false 
       }],
       "max-lines-per-function": ["error", 30],
-      "max-statements": ["error", 10],
+      "max-statements": ["error", 12],
       "max-statements-per-line": ["error", {
         "max": 1
       }],
@@ -120,6 +120,7 @@
         "files": ["*.spec.ts"],
         "rules": {
           "@typescript-eslint/explicit-function-return-type": "off",
+          "max-params": "off",
           "max-len": "off",
           "max-lines-per-function": "off"
         }

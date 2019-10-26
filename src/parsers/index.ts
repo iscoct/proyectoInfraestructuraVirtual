@@ -1,4 +1,28 @@
-export default function sectionParser(object: any, tree: any): string {
+function tagParser(object: any): string {
+    let parsedTag = `<${object.element}`;
+
+    for (let prop in object) {
+        if (prop !== 'element' && prop !== 'value' && prop !== 'section') {
+            const propValue = object[prop];
+
+            parsedTag += `
+                ${prop}=`;
+
+            parsedTag += typeof propValue === 'string' ?
+                `"${propValue}"` : `{${propValue}}`;
+        }
+    }
+
+    parsedTag += object.value ? `
+        >
+            ${object.value}
+        </${object.element}>
+    ` : object.section ? `/>` : '>';
+
+    return parsedTag;
+}
+
+export function sectionParser(object: any, tree: any): string {
     let parsedSection = tagParser(object);
 
     for (let subsection in object.sections) {
@@ -24,26 +48,23 @@ export default function sectionParser(object: any, tree: any): string {
     return parsedSection;
 }
 
-function tagParser(object: any): string {
-    let parsedTag = `<${object.element}`;
+export default function treeParser(tree: any): string {
+    const sections = tree.sections;
+    let parsedSections = '';
 
-    for (let prop in object) {
-        if (prop !== 'element' && prop !== 'value' && prop !== 'section') {
-            const propValue = object[prop];
-
-            parsedTag += `
-                ${prop}=`;
-
-            parsedTag += typeof propValue === 'string' ?
-                    `"${propValue}"` : `{${propValue}}`;
-        }
+    for (let section in sections) {
+        parsedSections += sectionParser(sections[section], tree);
     }
 
-    parsedTag += object.value ? `
-        >
-            ${object.value}
-        </${object.element}>
-    ` : (object.section ? `/>` : '>');
+    return `
+        import React, { PureComponent } from 'react';
 
-    return parsedTag;
+        export default class View extends PureComponent {
+            render() {
+                return (
+                    ${parsedSections}
+                );
+            }
+        }
+    `;
 }

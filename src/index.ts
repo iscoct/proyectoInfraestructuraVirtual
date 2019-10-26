@@ -15,7 +15,7 @@ app.get(['/', '/health'], (req, res): void => {
 app.get('/parser', (req, res): void => {
     const tree: any = req.body;
 
-    const parsedJson = parser(tree.sections, tree);
+    const parsedJson = parser(tree);
 
     const prettierParsedJson = prettier.format(parsedJson, { printWidth: 100, parser: 'babel' });
 
