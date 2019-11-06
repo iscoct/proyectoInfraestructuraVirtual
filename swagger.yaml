@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: React Parser
+  description: Microservice to parse from a JSON to a React Structure Application
+  version: 0.0.1
+
+paths:
+  /:
+    get:
+      summary: Checker server.
+      description: Path to check if the server is up.
+      responses:
+        '200':
+          $ref: '#/components/responses/Health'
+          
+  /status:
+    get:
+      summary: Checker server.
+      description: Path to check if the server is up.
+      responses:
+        '200':
+          $ref: '#/components/responses/Health'
+
+  /health:
+    get:
+      summary: Checker server
+      description: Path to check if the server is up.
+      responses:
+        '200':
+          description: Server up
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 'The server is still running'
+  
+  /parser:
+    get:
+      summary: React Parser
+      description: Parse a JSON to a React Structure Application
+      responses:
+        '200':
+          description: JSON with a good schema and return a correct React Structure Application
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reactApp:
+                    type: string
+                    description: React Structure Application
+                    example: "import React, { PureComponent } from \"react\";\n\nexport default class View extends PureComponent {\n  render() {\n    return <React.Fragment></React.Fragment>;\n  }\n}\n"
+
+components:
+  responses:
+    Health:
+      description: Server up
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                description: Set the status description of the request
+                example: 'OK'

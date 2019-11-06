@@ -1,16 +1,8 @@
-const get = jest.fn();
 const listen = jest.fn();
 const use = jest.fn();
+const mockYamlLoader = jest.fn(() => 'dummyYamlLoader');
+const mockSwaggerSetup = jest.fn(() => 'dummySwaggerSetup');
 
-jest.mock('express', () => {
-    return () => {
-        return {
-            get,
-            listen,
-            use
-        };
-    };
-});
 jest.mock('body-parser', () => {
     return {
         json: () => 'dummyJson'
@@ -18,47 +10,63 @@ jest.mock('body-parser', () => {
 });
 jest.mock('prettier', () => {
     return {
-        format: () => 'dummyPrettierFormat'
+        format: 'dummyPrettierFormat'
+    };
+});
+jest.mock('swagger-ui-express', () => {
+    return {
+        serve: 'dummySwagger',
+        setup: mockSwaggerSetup
+    };
+});
+jest.mock('yamljs', () => {
+    return {
+        load: mockYamlLoader
+    };
+});
+jest.mock('../src/router', () => {
+    return {
+        listen,
+        use
     };
 });
 
-import express from 'express';
+import '../src';
 
 describe('Server', () => {
-    const server = express();
-    require('../src/index');
+    it('must load swagger.yaml to create the Swagger UI', () => {
+        expect(mockYamlLoader).toHaveBeenCalledWith('./swagger.yaml');
+    });
+
+    it('must setup swagger ui with swagger.yaml', () => {
+        expect(mockSwaggerSetup).toHaveBeenCalledWith('dummyYamlLoader');
+    });
+
+    describe('use', () => {
+        it('Swagger UI', () => {
+            expect(use).toHaveBeenCalledWith('/api-doc', 'dummySwagger', 'dummySwaggerSetup');
+        });
+    });
 
     describe('port', () => {
         beforeEach(() => {
             jest.resetModules();
-            jest.resetAllMocks();
+            jest.clearAllMocks();
         });
 
         it('must listen at 8080 by default', () => {
             require('../src/index');
     
-            expect(server.listen).toBeCalledWith(8080, expect.any(Function));
+            expect(listen).toBeCalledWith(8080, expect.any(Function));
         });
-    
+
         it('must listen at the port it is assigned in the port ENV variable', () => {
             const port = '4000';
             process.env.PORT = port;
     
             require('../src/index');
     
-            expect(server.listen).toHaveBeenCalledWith(port, expect.any(Function));
+            expect(listen).toHaveBeenCalledWith(port, expect.any(Function));
         });
-    });
-
-    it('must server at / and /health to check that the server is running', () => {
-        expect(server.get).toHaveBeenCalledWith(['/', '/health'], expect.any(Function));
-    });
-
-    it('must use body parser', () => {
-        expect(server.use).toHaveBeenCalledWith('dummyJson');
-    });
-
-    it('must server at /parser to parse the tree it is given', () => {
-        expect(server.get).toHaveBeenCalledWith('/parser', expect.any(Function));
     });
 });

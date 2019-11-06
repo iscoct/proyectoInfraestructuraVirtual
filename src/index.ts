@@ -1,28 +1,14 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import prettier from 'prettier';
-import parser from './parsers';
+import swaggerUi from 'swagger-ui-express';
+import YAML from 'yamljs';
+import app from './router';
 
-const app = express();
 const port = process.env.PORT || 8080;
+const swaggerDocument = YAML.load('./swagger.yaml');
 
-app.use(bodyParser.json());
-
-app.get(['/', '/health'], (req, res): void => {
-    res.send('The server is still running');
-});
-
-app.get('/parser', (req, res): void => {
-    const tree: any = req.body;
-
-    const parsedJson = parser(tree);
-
-    const prettierParsedJson = prettier.format(parsedJson, { printWidth: 100, parser: 'babel' });
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(prettierParsedJson);
-});
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(port, (): void => {
     console.log(`Arrancado el servidor en el puerto: ${port}`);
 });
+
+export default app;

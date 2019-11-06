@@ -1,8 +1,8 @@
-function tagParser(object: any): string {
+export function tagParser(object: any): string {
     let parsedTag = `<${object.element}`;
 
     for (let prop in object) {
-        if (prop !== 'element' && prop !== 'value' && prop !== 'section') {
+        if (prop !== 'element' && prop !== 'value' && prop !== 'sections' && prop !== 'section') {
             const propValue = object[prop];
 
             parsedTag += `
@@ -25,14 +25,14 @@ function tagParser(object: any): string {
 export function sectionParser(object: any, tree: any): string {
     let parsedSection = tagParser(object);
 
-    for (let subsection in object.sections) {
-        const section = object.section[subsection];
+    for (const subsection in object.sections) {
+        const section = object.sections[subsection];
 
         parsedSection += sectionParser(section, tree);
     }
 
     if (tree) {
-        for (let field in tree.fields) {
+        for (const field in tree.fields) {
             const actualField = tree.fields[field];
     
             if (actualField.section === object.id) {
@@ -41,9 +41,7 @@ export function sectionParser(object: any, tree: any): string {
         }
     }
 
-    if (! object.section) {
-        parsedSection += `</${object.element}>`;
-    }
+    parsedSection += `</${object.element}>`;
 
     return parsedSection;
 }
@@ -52,7 +50,7 @@ export default function treeParser(tree: any): string {
     const sections = tree.sections;
     let parsedSections = '';
 
-    for (let section in sections) {
+    for (const section in sections) {
         parsedSections += sectionParser(sections[section], tree);
     }
 

@@ -49,8 +49,6 @@
 }
 ```
 
-En siguientes hitos iremos mostrando la documentación del esquema exportado.
-
 ## Salida
 
 ```

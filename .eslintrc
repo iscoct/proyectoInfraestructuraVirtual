@@ -49,7 +49,7 @@
       "no-func-assign": "error",
       "no-inner-declarations": "error",
       "no-invalid-regexp": "error",
-      "complexity": ["error", 8],
+      "complexity": ["error", 9],
       "consistent-return": "error",
       "curly": "error",
       "eqeqeq": "error",
@@ -83,7 +83,7 @@
         "ignoreStrings": false,
         "ignoreTemplateLiterals": false
       }],
-      "max-nested-callbacks": ["error", 3],
+      "max-nested-callbacks": ["error", 4],
       "max-params": ["error", 3],
       "max-lines": ["error", {
           "max": 500,

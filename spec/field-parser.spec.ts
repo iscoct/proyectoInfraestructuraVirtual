@@ -1,4 +1,4 @@
-import { sectionParser } from '../src/parsers';
+import { tagParser } from '../src/parsers';
 import prettier from 'prettier';
 
 describe('Field parser', () => {
@@ -31,8 +31,7 @@ describe('Field parser', () => {
                 >
                     dummyValue
                 </Button>
-            `,
-            {}
+            `
         ],
         [
             'dropdown item',
@@ -56,8 +55,7 @@ describe('Field parser', () => {
                 >
                     dummyValue
                 </Dropdown.Item>
-            `,
-            {}
+            `
         ],
         [
             'dropdown divider',
@@ -68,8 +66,7 @@ describe('Field parser', () => {
             },
             `
                 <Dropdown.Divider id='dummyId'/>
-            `,
-            {}
+            `
         ],
         [
             'dropdown header',
@@ -81,8 +78,7 @@ describe('Field parser', () => {
             },
             `
                 <Dropdown.Header id='dummyId'>dummyValue</Dropdown.Header>
-            `,
-            {}
+            `
         ],
         [
             'dropdown toggle',
@@ -100,8 +96,7 @@ describe('Field parser', () => {
                 >
                     dummyValue
                 </Dropdown.Toggle>
-            `,
-            {}
+            `
         ],
         [
             'carousel caption',
@@ -117,14 +112,13 @@ describe('Field parser', () => {
                 >
                     dummyValue
                 </Carousel.Caption>
-            `,
-            {}
+            `
         ]
     ];
 
     it.each(fieldData)('must parse %s component', 
-        (component: string, object: any, expectedResult: string, tree: any) => {
-            const parsedElement = sectionParser(object, tree);
+        (component: string, object: any, expectedResult: string) => {
+            const parsedElement = tagParser(object);
 
             const prettierParsedElement = prettier.format(parsedElement, { printWidth: 100, parser: 'babel' });
             const prettierExpected = prettier.format(expectedResult, { printWidth: 100, parser: 'babel' });
