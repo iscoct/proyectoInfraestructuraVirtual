@@ -54,10 +54,11 @@ paths:
         - React Parser
       summary: React Parser
       description: Parse a JSON to a React Structure Application
-      consumes:
-        - application/json
-      produces:
-        - application/json
+      parameters:
+        - name: Metadata
+          in: body
+          schema:
+            $ref: '#/components/schemas/Metadata'
       responses:
         '200':
           description: JSON with a good schema and return a correct React Structure Application
@@ -84,3 +85,45 @@ components:
                 type: string
                 description: Set the status description of the request
                 example: 'OK'
+  schemas:
+    Metadata:
+      type: object
+      properties:
+        sections:
+          type: object
+          required:
+            - element
+            - id
+          properties:
+            element:
+              type: string
+              description: React Component Name
+              example: 'Container'
+            sections:
+              type: object
+              description: Subsections that will be nested
+            anotherProperties:
+              type: string
+              description: Whatever another property is given will be place as <Component anotherProperties={propertyValue} />
+            id:
+              type: string
+              description: Section Identifier
+        fields:
+          type: object
+          required:
+            - element
+            - section
+          properties:
+            element:
+              type: string
+              description: React Component Name
+              example: 'Button'
+            value:
+              type: string
+              description: If value is given the component will be render like <Component>{value}</Component> and if not <Component />
+            section:
+              type: string
+              description: Section where the component will be render
+            anotherProperties:
+              type: string
+              description: Whatever another property is given will be place as <Component anotherProperties={propertyValue} />
