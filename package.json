@@ -9,7 +9,8 @@
     "nodemon": "nodemon dist/index.js",
     "test": "jest -c jest.config.json",
     "start": "node dist/index.js",
-    "eslint": "eslint src/ spec/ --ext .ts"
+    "eslint": "eslint src/ spec/ --ext .ts",
+    "coveralls": "jest -c jest.config.json --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "@types/yamljs": "^0.2.30",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
+    "coveralls": "^3.0.7",
     "eslint": "^6.1.0",
     "jest": "^24.8.0",
     "jest-html-reporter": "^2.5.0",
