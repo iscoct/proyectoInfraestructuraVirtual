@@ -1,9 +1,11 @@
 # Herramientas que se utilizan
 
+## Para implementar el servicio
+
 - Lenguaje (entorno de desarrollo): **Javascript** [NodeJS](https://nodejs.org/es/)
     Se usa NodeJS por la experiencia en este lenguaje del desarrollador.
     No obstante, aprender NodeJS tiene ventajas como que su lenguaje es Javascript, y si se aprende Javascript podemos utilizar nuestros conocimiento en el Frontend (React, Vue, Angular) como en el backend (NodeJS).
-    Además, los paquetes exportados npm tienen por lo general una gran documentación y muy intuitiva, el código es abierto, es eficiente dado que es asíncrono y tiene una gran comunidad de gente especializada en el desarrollo del software.
+    Además, los paquetes exportados npm tienen, por lo general, una gran documentación siendo muy intuitiva, el código es abierto, es eficiente dado que es asíncrono y tiene una gran comunidad de gente especializada en el desarrollo del software.
 - Gestor de paquetes: [NVM](https://github.com/nvm-sh/nvm)
     Es un gestor de paquetes que se usa por debajo de npm (https://www.npmjs.com/).
     Sirve para controlar las versiones de los paquetes importados desde npm.
@@ -29,8 +31,13 @@
     Swagger nos permite tener una referencia concisa que contenga toda la información requerida para trabajar con una API, de tal manera que podamos conocer de manera muy sencilla todas las operaciones que puede realizar un servicio.
     Además, también nos permite hacer peticiones desde Swagger, lo que nos sirve para hacer de Playground.
 - Librería de logs (puede cambiar porque está por revisar si hay alguna mejor): [Log4JS](https://www.npmjs.com/package/log4js)
-- Metodología de desarrollo: [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
-    La principal ventaja de esta técnica de desarrollo es que al indicar lo que ha de hacer el software se evita la posibilidad de escribir código que no se va a utilizar.
-    La otra principal ventaja es que si no garantizamos que pasa un test tampoco podemos garantizar que el código funciona tal y como se quiere.
-- Para hacer integración continua: [Travis CI](https://travis-ci.com/).
+
+## Metodología de desarrollo [TDD](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas)
+
+La principal ventaja de esta técnica de desarrollo es que al indicar lo que ha de hacer el software se evita la posibilidad de escribir código que no se va a utilizar.
+La otra principal ventaja es que si no garantizamos que pasa un test tampoco podemos garantizar que el código funciona tal y como se quiere.
+
+## Construcción, prueba y arranque
+
+- Para hacer integración continua: [Travis CI](https://travis-ci.com/) y [GitHub Actions](https://github.com/iscoct/proyectoInfraestructuraVirtual/actions).
 - Para hacer el despliegue en la nube: [Heroku](https://www.heroku.com/).

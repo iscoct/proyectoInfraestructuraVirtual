@@ -3,6 +3,7 @@
 ![](https://github.com/iscoct/proyectoInfraestructuraVirtual/workflows/ReactParser/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Build Status](https://travis-ci.com/iscoct/proyectoInfraestructuraVirtual.svg?branch=master)](https://travis-ci.com/iscoct/proyectoInfraestructuraVirtual)
+[![CircleCI](https://circleci.com/gh/iscoct/proyectoInfraestructuraVirtual.svg?style=svg)](https://circleci.com/gh/iscoct/proyectoInfraestructuraVirtual)
 
 Repositorio donde se realizará el proyecto de infraestrutura virtual, curso 2019/20.
 
@@ -17,6 +18,18 @@ Ejemplo de elementos son botones, checkboxes, select entre otros. Mientras que e
 
 Este microservicio pretende paliar este proceso repetitivo exportando un esquema en formato JSON (metadata) para que nos devuelva un esqueleto de una aplicación de React.
 
+## API REST
+
+Actualmente, la API dispone de las siguientes rutas:
+
+- GET
+    - / y /status: Devuelven 200 como código de estado HTTP y { "status": "OK" }
+    - /health: Devuelve 200 como código y 'The server is still running' como texto plano
+    - /parser: Recibe un JSON con un esquema correcto y devuelve la estructura de la aplicación React
+    - /api-doc: Define y especifica la API mediante Swagger ([Open API 3.0](https://swagger.io/docs/specification/about/)).
+
+**Proximamente se podrá ver la documentación de la API en cloud por Swagger cuando se haga el deploy**
+
 ## Enlaces
 
 - Para ver este mismo README desde gh-pages: [GitHub Pages](https://iscoct.github.io/proyectoInfraestructuraVirtual/)
@@ -24,3 +37,4 @@ Este microservicio pretende paliar este proceso repetitivo exportando un esquema
 - Herramientas que se utilizarán: [Herramientas](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/herramientas)
 - Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
 - Para ver el esquema del proyecto: [Esquema](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/esquema)
+- Integración continua: [CI](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ci)
