@@ -4,7 +4,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Build Status](https://travis-ci.com/iscoct/proyectoInfraestructuraVirtual.svg?branch=master)](https://travis-ci.com/iscoct/proyectoInfraestructuraVirtual)
 [![CircleCI](https://circleci.com/gh/iscoct/proyectoInfraestructuraVirtual.svg?style=svg)](https://circleci.com/gh/iscoct/proyectoInfraestructuraVirtual)
-
+[![Coverage Status](https://coveralls.io/repos/github/iscoct/proyectoInfraestructuraVirtual/badge.svg?branch=master)](https://coveralls.io/github/iscoct/proyectoInfraestructuraVirtual?branch=master)
 Repositorio donde se realizará el proyecto de infraestrutura virtual, curso 2019/20.
 
 ## Motivación
@@ -28,7 +28,9 @@ Actualmente, la API dispone de las siguientes rutas:
     - /parser: Recibe un JSON con un esquema correcto y devuelve la estructura de la aplicación React
     - /api-doc: Define y especifica la API mediante Swagger ([Open API 3.0](https://swagger.io/docs/specification/about/)).
 
-**Proximamente se podrá ver la documentación de la API en cloud por Swagger cuando se haga el deploy**
+### Documentación Swagger
+
+Puede comprobar la documentación de la API vía Swagger [aquí](https://react-parser.herokuapp.com/api-doc/)
 
 ## Enlaces
 
