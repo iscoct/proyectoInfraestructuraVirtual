@@ -3,10 +3,20 @@ info:
   title: React Parser
   description: Microservice to parse from a JSON to a React Structure Application
   version: 0.0.1
+  contact:
+    email: iscoct@correo.ugr.es
+
+tags:
+  - name: Healthy
+    description: Check if the server is up
+  - name: React Parser
+    description: Parse metadata to a skeleton React App
 
 paths:
   /:
     get:
+      tags:
+        - Healthy
       summary: Checker server.
       description: Path to check if the server is up.
       responses:
@@ -15,6 +25,8 @@ paths:
           
   /status:
     get:
+      tags:
+        - Healthy
       summary: Checker server.
       description: Path to check if the server is up.
       responses:
@@ -23,6 +35,8 @@ paths:
 
   /health:
     get:
+      tags:
+        - Healthy
       summary: Checker server
       description: Path to check if the server is up.
       responses:
@@ -36,8 +50,14 @@ paths:
   
   /parser:
     get:
+      tags:
+        - React Parser
       summary: React Parser
       description: Parse a JSON to a React Structure Application
+      consumes:
+        - application/json
+      produces:
+        - application/json
       responses:
         '200':
           description: JSON with a good schema and return a correct React Structure Application

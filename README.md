@@ -18,16 +18,6 @@ Ejemplo de elementos son botones, checkboxes, select entre otros. Mientras que e
 
 Este microservicio pretende paliar este proceso repetitivo exportando un esquema en formato JSON (metadata) para que nos devuelva un esqueleto de una aplicación de React.
 
-## API REST
-
-Actualmente, la API dispone de las siguientes rutas:
-
-- GET
-    - / y /status: Devuelven 200 como código de estado HTTP y { "status": "OK" }
-    - /health: Devuelve 200 como código y 'The server is still running' como texto plano
-    - /parser: Recibe un JSON con un esquema correcto y devuelve la estructura de la aplicación React
-    - /api-doc: Define y especifica la API mediante Swagger ([Open API 3.0](https://swagger.io/docs/specification/about/)).
-
 ### Documentación Swagger
 
 Puede comprobar la documentación de la API vía Swagger [aquí](https://react-parser.herokuapp.com/api-doc/)
