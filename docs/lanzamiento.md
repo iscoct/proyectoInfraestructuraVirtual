@@ -14,8 +14,6 @@ Esto instalará de forma automática los paquetes de npm que se encuentran en el
 
 # Build
 
-`buildtool: package.json`
-
 Para poder ejecutar el comando necesario para hacer el build: `npm run build`, se necesita poder ejecutar desde la terminal `tsc`.
 Sino se puede, hacer: `npm install -g tsc`.
 
