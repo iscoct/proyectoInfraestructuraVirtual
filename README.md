@@ -23,11 +23,17 @@ Este microservicio pretende paliar este proceso repetitivo exportando un esquema
 
 Puede comprobar la documentación de la API vía Swagger [aquí](https://react-parser.herokuapp.com/api-doc/)
 
+### [Build](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
+
+```
+buildtool: package.json
+```
+
 ## Enlaces
 
 - Para ver este mismo README desde gh-pages: [GitHub Pages](https://iscoct.github.io/proyectoInfraestructuraVirtual/)
 - Primer ejemplo sobre la entrada y la salida que hará este microservicio: [Ejemplo](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ejemplo)
 - Herramientas que se utilizarán: [Herramientas](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/herramientas)
-- Instalar, buildear (`buildtool: package.json`) y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
+- Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
 - Para ver el esquema del proyecto: [Esquema](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/esquema)
 - Integración continua: [CI](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ci)
