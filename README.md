@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.com/iscoct/proyectoInfraestructuraVirtual.svg?branch=master)](https://travis-ci.com/iscoct/proyectoInfraestructuraVirtual)
 [![CircleCI](https://circleci.com/gh/iscoct/proyectoInfraestructuraVirtual.svg?style=svg)](https://circleci.com/gh/iscoct/proyectoInfraestructuraVirtual)
 [![Coverage Status](https://coveralls.io/repos/github/iscoct/proyectoInfraestructuraVirtual/badge.svg?branch=master)](https://coveralls.io/github/iscoct/proyectoInfraestructuraVirtual?branch=master)
+
 Repositorio donde se realizará el proyecto de infraestrutura virtual, curso 2019/20.
 
 ## Motivación
