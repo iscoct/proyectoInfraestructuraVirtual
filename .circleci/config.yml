@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:11
+    steps:
+      - checkout
+      - run:
+          name: Install
+          command: npm install
+      - run:
+          name: Build
+          command: npm run build
+      - run:
+          name: Coverage
+          command: npm run coverage
+      - run:
+          name: ESLint
+          command: npm run eslint
