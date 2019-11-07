@@ -26,9 +26,13 @@ jobs:
       - name: 'Install NodeJS'
         uses: actions/setup-node@v1
         with: 
-          node-version: '10.x'
-      - name: 'Install, build and test'
-        run: |
-          npm install
-          npm run build
-          npm run test
+          node-version: '11.x'
+      - name: 'Install'
+        run: npm install
+      - name: 'Build'
+        run: npm run build
+      - name: 'Coverage'
+        run: npm run coverage
+      - name: 'ESLint'
+        run: npm run eslint
+      
