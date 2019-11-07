@@ -1,4 +1,4 @@
-const listen = jest.fn();
+const listen = jest.fn((port, func) => func());
 const use = jest.fn();
 const mockYamlLoader = jest.fn(() => 'dummyYamlLoader');
 const mockSwaggerSetup = jest.fn(() => 'dummySwaggerSetup');

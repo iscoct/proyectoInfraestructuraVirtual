@@ -56,4 +56,23 @@ describe('Section parser', () => {
             expect(prettierParsedElement).toBe(prettierExpected);
         }
     );
+
+    it('must parse only the sections when no tree is given', () => {
+        const parsedElement = sectionParser(dropdown, undefined);
+        const expectedResult = `
+            <Dropdown
+                drop='up'
+                alignRight={true}
+                show={true}
+                flip={true}
+                id='dummyId'
+            >
+            </Dropdown>
+        `;
+
+        const prettierParsedElement = prettier.format(parsedElement, { printWidth: 100, parser: 'babel' });
+        const prettierExpected = prettier.format(expectedResult, { printWidth: 100, parser: 'babel' });
+        
+        expect(prettierParsedElement).toBe(prettierExpected);
+    });
 });
