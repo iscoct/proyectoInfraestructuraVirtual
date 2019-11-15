@@ -21,8 +21,8 @@ Este microservicio pretende paliar este proceso repetitivo exportando un esquema
 
 ## URL del proyecto desplegado
 
-Heroku: [Heroku React Parser](https://react-parser.herokuapp.com/)
-Azure: [Azure React Parser](http://reactparser.azurewebsites.net/)
+- Heroku: [Heroku React Parser](https://react-parser.herokuapp.com/)
+- Azure: [Azure React Parser](http://reactparser.azurewebsites.net/)
 
 ### Documentación Swagger
 
