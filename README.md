@@ -41,5 +41,6 @@ buildtool: package.json
 - Herramientas que se utilizarán: [Herramientas](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/herramientas)
 - Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
 - Para ver el esquema del proyecto: [Esquema](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/esquema)
+- Estructura de clases: [Clases](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/clases)
 - Integración continua: [CI](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ci)
 - Despliegue: [CD](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/cd)
