@@ -40,7 +40,7 @@ jobs:
         run: npm run eslint
       - uses: azure/webapps-deploy@v1
         with:
-          app-name: 'reactparser'
+          app-name: 'ReactParser'
       - name: 'logout'
         run: az logout
         if: always()
