@@ -19,6 +19,11 @@ Ejemplo de elementos son botones, checkboxes, select entre otros. Mientras que e
 
 Este microservicio pretende paliar este proceso repetitivo exportando un esquema en formato JSON (metadata) para que nos devuelva un esqueleto de una aplicación de React.
 
+## URL del proyecto desplegado
+
+Heroku: [Heroku React Parser](https://react-parser.herokuapp.com/)
+Azure: [Azure React Parser](http://reactparser.azurewebsites.net/)
+
 ### Documentación Swagger
 
 Puede comprobar la documentación de la API vía Swagger [aquí](https://react-parser.herokuapp.com/api-doc/)
@@ -37,3 +42,4 @@ buildtool: package.json
 - Instalar, buildear y lanzar el proyecto: [Instalación, Construcción y Lanzamiento](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/lanzamiento)
 - Para ver el esquema del proyecto: [Esquema](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/esquema)
 - Integración continua: [CI](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/ci)
+- Despliegue: [CD](https://iscoct.github.io/proyectoInfraestructuraVirtual/docs/cd)
