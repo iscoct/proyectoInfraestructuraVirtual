@@ -43,3 +43,4 @@ jobs:
           app-name: 'reactparser'
       - name: 'logout'
         run: az logout
+        if: always()
