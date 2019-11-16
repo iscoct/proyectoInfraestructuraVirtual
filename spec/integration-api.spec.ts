@@ -15,7 +15,7 @@ describe('API', () => {
     describe.each([['/'], ['/status']])('GET %s', () => {
         it('must send a json with state field and OK as value indicating that the server is ready', (done) => {
             requestedApp.get('/status').expect(200,
-                { state: 'OK' }, done);
+                { status: 'OK' }, done);
         });
     });
 
