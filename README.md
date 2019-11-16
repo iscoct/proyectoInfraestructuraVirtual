@@ -21,16 +21,16 @@ Este microservicio pretende paliar este proceso repetitivo exportando un esquema
 
 ## URLs del proyecto desplegado
 
-### Heroku
-
-```
-    URL: https://react-parser.herokuapp.com/
-```
-
 ### Azure
 
 ```
-    URL: http://reactparser.azurewebsites.net/
+    Despligue: http://reactparser.azurewebsites.net/
+```
+
+### Heroku
+
+```
+    Despliegue: https://react-parser.herokuapp.com/
 ```
 
 ### Documentación Swagger
