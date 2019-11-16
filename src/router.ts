@@ -12,7 +12,7 @@ app.get('/health', (req, res): void => {
 
 app.get(['/', '/status'], (req, res): void => {
     res.json({
-        state: 'OK'
+        status: 'OK'
     });
 });
 
