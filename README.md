@@ -19,10 +19,19 @@ Ejemplo de elementos son botones, checkboxes, select entre otros. Mientras que e
 
 Este microservicio pretende paliar este proceso repetitivo exportando un esquema en formato JSON (metadata) para que nos devuelva un esqueleto de una aplicación de React.
 
-## URL del proyecto desplegado
+## URLs del proyecto desplegado
 
-- Heroku: [Heroku React Parser](https://react-parser.herokuapp.com/)
-- Azure: [Azure React Parser](http://reactparser.azurewebsites.net/)
+### Heroku
+
+```
+    URL: https://react-parser.herokuapp.com/
+```
+
+### Azure
+
+```
+    URL: http://reactparser.azurewebsites.net/
+```
 
 ### Documentación Swagger
 
